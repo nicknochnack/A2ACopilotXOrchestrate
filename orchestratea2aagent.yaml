@@ -1,0 +1,12 @@
+spec_version: v1
+kind: external
+name: copilot_agent
+title: AIA Copilot Agent
+provider: external_chat/A2A/0.3.0
+description: AIA Group Rules Agent - this provides information around policy and member rules for insurance clients. It can also use tools to generate synthetic data, just tell it what kind of data you want.
+api_url: "http://host.docker.internal:9997"
+auth_scheme: NONE
+chat_params:
+  sendHistory: true
+  stream: false
+  pushNotifications: true
