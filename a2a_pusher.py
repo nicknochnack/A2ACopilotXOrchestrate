@@ -8,7 +8,7 @@ token = os.environ['WXO_TOKEN']
 url = os.environ['WXO_PUSH_NOTIFICATION_URL']
 
 def pushNotification(id, task_id, context_id, corr_id, status, message=None): 
-
+    # Surely this could be better? 
     try: 
         payload = json.dumps({
         "id": id,

@@ -20,19 +20,18 @@ from a2a.types import (
 if __name__ == '__main__': 
     skill = AgentSkill(
         id='copilot_agent',
-        name='AIA Copilot Agent',
-        description='Finds group rule details for AIA',
-        tags=['copilot aia insurance'],
+        name='Outlook Copilot Agent',
+        description='This agent is able to create draft emails and send those draft emails via Outlook.',
+        tags=['copilot', 'outlook', 'send email', 'draft email'],
         examples=[
-            'what are the age requirements for contributing based on the AIA rules?',
-            'Whats the minimum contribution age as per the AIA group rules?', 
-            'What changes do i need to notify AIA of?'
+            'Send this email ...',
+            'Draft this email ...', 
             ],
     )
 
     public_agent_card = AgentCard(
-        name='Copilot Insurance Rules Agent.', 
-        description='This agent retrieves insurance group policy rules.',
+        name='Outlook Copilot Agent', 
+        description='This agent is able to create draft emails and send those draft emails via Outlook.',
         version='0.0.1',
         default_input_modes=['text/plain'],
         default_output_modes=['text/plain'],
@@ -45,7 +44,7 @@ if __name__ == '__main__':
                 url='http://127.0.0.1:9997',
             )
         ],
-        skills=[skill],  # Only the basic skill for the public card
+        skills=[skill], 
     )
 
     request_handler = DefaultRequestHandler(
